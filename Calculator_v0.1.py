@@ -3,10 +3,14 @@ from tkinter import *
 def add_function():
     e3.insert(0, str(int(e1.get()) + int(e2.get())))
 
+def sub_function():
+    e4.insert(0, str(int(e1.get()) - int(e2.get())))
+
 def clear_entries():
     e1.delete(0,10)
     e2.delete(0,10)
     e3.delete(0,10)
+    e4.delete(0,10)
     
 
 root=Tk()
@@ -23,6 +27,10 @@ b1=Button(root, text=' + ', fg='navy', command=add_function)
 b1.grid(row=2, sticky=W)
 e3=Entry(root)
 e3.grid(row=2, column=1)
+b2=Button(root, text=' - ', fg='navy', command=sub_function)
+b2.grid(row=3, sticky=W)
+e4=Entry(root)
+e4.grid(row=3, column=1)
 b5=Button(root, text='Καθαρισμός', fg='navy', command=clear_entries)
 b5.grid(row=6, sticky=W)
 
